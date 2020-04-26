@@ -55,7 +55,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 
 // Shortcut to make keymap more readable
 #define SYM_L MO(_SYMB)
-
+#define NUM_L MO(_NUMPAD)
 #define KC_ALAS LALT_T(KC_PAST)
 #define KC_CTPL LCTL_T(KC_BSLS)
 
@@ -180,7 +180,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐                         ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_TAB  ,KC_Q    ,KC_W    ,KC_E    ,KC_R    ,KC_T    ,KC_LBRC ,                          SYM_L   ,KC_Y    ,KC_U    ,KC_I    ,KC_O    ,KC_P    ,KC_LBRC ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_ESC  ,KC_A    ,KC_S    ,KC_D    ,KC_F    ,KC_G    ,SYM_L   ,                          A(KC_SCLN),KC_H  ,KC_J    ,KC_K    ,KC_L    ,PESKY   ,KC_SCLN ,
+     KC_ESC  ,KC_A    ,KC_S    ,KC_D    ,KC_F    ,KC_G    ,NUM_L   ,                          A(KC_SCLN),KC_H  ,KC_J    ,KC_K    ,KC_L    ,PESKY   ,MO(_MOUSE),
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LSFT ,KC_Z    ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,KC_ADPU ,KC_PGDN ,        KC_HOME ,KC_ADEN ,KC_N    ,KC_M    ,KC_COMM ,KC_DOT  ,KC_SLSH ,TD(TD_RSFT_CAPS),
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
@@ -192,9 +192,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                                           ┌────────┬────────┬────────┬────────┬────────┬────────┐
      MO(_NAV),KC_2    ,KC_3    ,KC_4    ,R_ACNT  ,KC_6    ,                                            KC_7    ,KC_8    ,KC_9    ,KC_0    ,KC_GRV  ,KC_NDLZN,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐                         ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     _______ ,A(KC_R) ,KC_AT   ,A(KC_7) ,R_LONG  ,A(KC_5) ,KC_F6   ,                          SYM_L   ,KC_Y    ,KC_U    ,S(KC_SCLN),O_LONG,KC_SCLN ,KC_LBRC ,
+     _______ ,A(KC_R) ,A(KC_2),A(KC_7) ,R_LONG  ,A(KC_5) ,KC_F6   ,                          SYM_L   ,KC_Y    ,KC_U    ,S(KC_SCLN),O_LONG,KC_SCLN ,KC_LBRC ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_ESC  ,KC_AE   ,A(KC_SCLN),D_ACNT,KC_F    ,KC_G    ,SYM_L   ,                          A(KC_QUOT),KC_H,S(KC_QUOT),A(KC_QUOT),L_LONG,KC_UO   ,MO(_MOUSE),
+     KC_ESC  ,KC_AE   ,A(KC_SCLN),D_ACNT,KC_F    ,KC_G    ,SYM_L   ,                          A(KC_QUOT),KC_H,S(KC_QUOT),A(KC_QUOT),L_LONG,KC_UO   ,_______ ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LSFT ,KC_Z    ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,KC_ADPU ,KC_PGDN ,        KC_HOME ,KC_ADEN ,KC_N    ,KC_M    ,S(KC_QUOT),KC_DOT,KC_SLSH ,KC_RSFT ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
